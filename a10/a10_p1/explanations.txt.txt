@@ -1,0 +1,29 @@
+a) using namespace std; commented out:
+[Error] 'string' was not declared in this scope
+[Error] 'cout' was not declared in this scope
+[Error] 'endl' was not declared in this scope
+[Error] 'cin' was not declared in this scope
+[Error] 'name' was not declared in this scope
+[Error] 'getline' was not declared in this scope
+
+// When you use the std namespace, an identifier that is defined inside a 
+namespace, you have to tell the compiler that the identifier lives inside 
+the namespace. If this namespace is not used, then the computer cannot 
+identify the cout, cin, endl etc.. and therefore it throws errors. //
+
+Solution:
+(write std:: before data type string, cout, cin, endl, getline etc..) or
+(write using namespace std at beginning of code)
+
+b) Critter:: prefix removed in setHunger method:
+[Error] 'name' was not declared in this scope
+
+// The problem here, is that the void function name is undeclared. 
+That happens as Critter is a public method in Critter class, 
+and the method name is defined in the Critter class. Therefore,
+without constructor it will remain undefined. //
+
+Solution:
+(add constructor Critter:: before method name, so that we define at call.)
+(alternative solution: write the method definition inside the header file 
+or make the data member public)
