@@ -1,0 +1,9 @@
+Please explain the keywords private and protected and point out their differences:
+
+a) private -> The class members declared as private can be accessed only by the functions inside the class. 
+They are not allowed to be accessed directly by any object or function outside the class. Only the member 
+functions or the friend functions are allowed to access the private data members of a class.
+
+b) protected -> Protected access modifier is similar to that of private access modifiers; 
+the difference is that the class members declared as Protected are inaccessible outside 
+the class but they can be accessed by any subclass (derived class) of that class.
